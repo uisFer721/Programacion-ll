@@ -12,11 +12,11 @@ productos = [dict(producto) for producto in cursor.fetchall()]
 cursor.close()
 conexion.close()
 
-# aplicacion
+# Aplicacion
 
 app = Flask(__name__)
 
-# rustas
+# Rutas
 @app.route('/')
 def ruta_raiz():
     return render_template('index.html', productos=productos)
